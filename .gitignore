@@ -33,3 +33,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### privacy ###
+/src/main/resources/application.yml
