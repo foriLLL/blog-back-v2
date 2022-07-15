@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="space.foril.blog.repo.ArticleCateRepo">
+    <insert id="insertCate" parameterType="ArticleCate">
+        insert into "articlecate" ("cateName") values (#{cateName})
+    </insert>
+
+    <update id="updateCate" parameterType="ArticleCate">
+        update "articlecate" set "cateName" = #{cateName} where "cateId" = #{cateId}
+    </update>
+
+    <select id="findAllCates" resultType="ArticleCate">
+        select * from "articlecate"
+    </select>
+    <select id="findById" parameterType="java.lang.Integer" resultType="ArticleCate">
+        select * from "articlecate" where "cateId" = #{cateId}
+    </select>
+</mapper>
