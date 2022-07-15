@@ -7,8 +7,11 @@ import java.util.List;
 
 @Repository
 public interface UserRepo {
-    List<User> findAll();
-    Integer getUserNumber();
-    User findById(Integer userId);
-    User findByName(String name);
+    Integer insertUser(User user);
+    Integer deleteByName(String username);
+    Integer deleteById(Integer id);
+    Integer updateUser(User user);
+    User findByName(String username);
+    User findById(Integer id);
+    List<User> findAllUsers();
 }
