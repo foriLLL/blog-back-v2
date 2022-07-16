@@ -54,4 +54,7 @@
     <select id="findById" parameterType="java.lang.Integer" resultMap="articleResultMap">
         select * from "article" where "articleId" = #{id}
     </select>
+    <select id="findByCateId" parameterType="java.lang.Integer" resultMap="articleResultMap">
+        select * from "article" where "cateId" = #{cateId}
+    </select>
 </mapper>

@@ -40,6 +40,7 @@ public class ArticleRepoTest {
 
     @Test
     public void selectByIdTest() {
-        System.out.println(articleRepo.findById(240).getTime());
+        //System.out.println(articleRepo.findById(240).getTime());
+        articleRepo.findByCateId(2).forEach(article -> System.out.println(article.getTitle()));
     }
 }
