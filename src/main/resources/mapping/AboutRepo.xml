@@ -5,7 +5,7 @@
         update "about" set "content" = #{content}
     </update>
 
-    <select id="findAllAbout" resultType="About">
+    <select id="findAbout" resultType="About">
         select * from "about"
     </select>
 

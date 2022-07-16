@@ -23,6 +23,6 @@ public class AboutRepoTest {
     }
     @Test
     public void selectTest(){
-        System.out.println(aboutRepo.findAllAbout().getContent());
+        System.out.println(aboutRepo.findAbout().getContent());
     }
 }
