@@ -8,4 +8,7 @@
     <select id="getArticleInfoByArticleId" parameterType="java.lang.Integer" resultType="ArticleInfo">
         select * from "article" a,"user" u, "articlecate" c where a."articleId"=#{articleId} and u."userId"=a."userId" and a."cateId" = c."cateId"
     </select>
+    <select id="getAllArticleInfosByCateId" parameterType="java.lang.Integer" resultType="ArticleInfo">
+        select * from "article" a,"user" u, "articlecate" c where a."cateId"=#{cateId} and u."userId"=a."userId" and a."cateId" = c."cateId"
+    </select>
 </mapper>

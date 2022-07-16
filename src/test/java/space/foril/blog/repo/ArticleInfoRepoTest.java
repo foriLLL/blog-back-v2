@@ -17,7 +17,8 @@ public class ArticleInfoRepoTest {
     @Test
     public void selectTest(){
         //System.out.println(articleInfoRepo.getArticleInfoByArticleId(13));
-        articleInfoRepo.getAllArticleInfos().forEach(System.out::println);
+        //articleInfoRepo.getAllArticleInfos().forEach(System.out::println);
+        articleInfoRepo.getAllArticleInfosByCateId(2).forEach(System.out::println);
     }
 
 }
