@@ -13,7 +13,7 @@ import java.util.List;
 
 @Api(tags = "用户API")
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/user")
 class UserApiController {
     private final UserService userService;
 

@@ -15,7 +15,7 @@ import java.util.List;
 
 @Api(tags = "文章信息API")
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/articleInfo")
 class ArticleInfoApiController {
     private final ArticleInfoService articleInfoService;
 
@@ -25,7 +25,7 @@ class ArticleInfoApiController {
     }
 
     @ApiOperation("根据文章id获取文章信息")
-    @GetMapping("/articleInfo/articleId/{id}")
+    @GetMapping("/articleId/{id}")
     public ResBody<ArticleInfo> getArticleInfoById(@PathVariable("id") Integer articleId) {
         ArticleInfo articleInfo = articleInfoService.getArticleInfoById(articleId);
         if (articleInfo != null) {
@@ -36,7 +36,7 @@ class ArticleInfoApiController {
     }
 
     @ApiOperation("根据类别id获取对应类别所有文章信息")
-    @GetMapping("/articleInfo/cateId/{id}")
+    @GetMapping("/cateId/{id}")
     public ResBody<List<ArticleInfo>> getArticleInfosByCateId(@PathVariable("id") Integer articleId) {
         List<ArticleInfo> articleInfos = articleInfoService.getArticleInfosByCateId(articleId);
         if (articleInfos != null) {
@@ -47,7 +47,7 @@ class ArticleInfoApiController {
     }
 
     @ApiOperation("获取所有文章信息")
-    @GetMapping("/articleInfo")
+    @GetMapping("")
     public ResBody<List<ArticleInfo>> getArticleInfos() {
         List<ArticleInfo> articleInfos = articleInfoService.getAllArticleInfos();
         if (articleInfos != null) {
