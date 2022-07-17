@@ -29,7 +29,7 @@ class ArticleCateApiController {
     }
 }
 
-@Api(tags = "管理文章类别API")
+@Api(tags = "文章类别管理API")
 @RestController("/api/mani/articleCate")
 class ArticleCateManiController{
     private final ArticleCateService articleCateService;
@@ -38,11 +38,13 @@ class ArticleCateManiController{
     public ArticleCateManiController(ArticleCateService articleCateService) {
         this.articleCateService = articleCateService;
     }
+    @ApiOperation("新增文章类别")
     @PutMapping("")
     public ResBody<Boolean> insertCate(@RequestBody ArticleCate articleCate){
         Boolean ifSuccessful = articleCateService.insertCate(articleCate);
         return new ResBody<>(ifSuccessful, ifSuccessful, "");
     }
+    @ApiOperation("修改文章类别")
     @PostMapping("")
     public ResBody<Boolean> updateCate(@RequestBody ArticleCate articleCate){
         Boolean ifSuccessful = articleCateService.updateCate(articleCate);
