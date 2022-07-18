@@ -30,7 +30,8 @@ class ArticleCateApiController {
 }
 
 @Api(tags = "文章类别管理API")
-@RestController("/api/mani/articleCate")
+@RestController
+@RequestMapping("/api/mani/articleCate")
 class ArticleCateManiController{
     private final ArticleCateService articleCateService;
 
