@@ -3,7 +3,7 @@
 <mapper namespace="space.foril.blog.repo.ArticleInfoRepo">
 
     <select id="getAllArticleInfos" resultType="ArticleInfo">
-        select * from "article" a,"user" u, "articlecate" c where u."userId"=a."userId" and a."cateId" = c."cateId"
+        select * from "article" a,"user" u, "articlecate" c where u."userId"=a."userId" and a."cateId" = c."cateId" order by a.time desc
     </select>
     <select id="getArticleInfoByArticleId" parameterType="java.lang.Integer" resultType="ArticleInfo">
         select * from "article" a,"user" u, "articlecate" c where a."articleId"=#{articleId} and u."userId"=a."userId" and a."cateId" = c."cateId"
