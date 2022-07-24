@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 @Api(tags = "用户API")
 @RestController
+@CrossOrigin()
 @RequestMapping("/api/user")
 class UserApiController {
     private final UserService userService;

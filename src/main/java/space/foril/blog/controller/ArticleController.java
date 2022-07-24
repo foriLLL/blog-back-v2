@@ -10,6 +10,7 @@ import space.foril.blog.service.ArticleService;
 
 @Api(tags = "文章API")
 @RestController
+@CrossOrigin()
 @RequestMapping("/api/article")
 class ArticleApiController {
     private final ArticleService articleService;
@@ -33,6 +34,7 @@ class ArticleApiController {
 
 @Api(tags = "文章管理API")
 @RestController
+@CrossOrigin()
 @RequestMapping("/api/mani/article")
 class ArticleManiController {
     private final ArticleService articleService;

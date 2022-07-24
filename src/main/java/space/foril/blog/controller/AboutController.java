@@ -10,6 +10,7 @@ import space.foril.blog.service.AboutService;
 
 @Api(tags="关于信息API")
 @RestController
+@CrossOrigin()
 @RequestMapping("/api/about")
 class AboutApiController {
     private final AboutService aboutService;
@@ -28,6 +29,7 @@ class AboutApiController {
 
 @Api(tags="关于管理API")
 @RestController
+@CrossOrigin()
 @RequestMapping("/api/mani/about")
 class AboutManiController{
     private final AboutService aboutService;

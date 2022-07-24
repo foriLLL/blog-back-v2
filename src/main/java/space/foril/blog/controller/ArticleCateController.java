@@ -12,6 +12,7 @@ import java.util.List;
 
 @Api(tags = "文章类别API")
 @RestController
+@CrossOrigin()
 @RequestMapping("/api/articleCate")
 class ArticleCateApiController {
     private final ArticleCateService articleCateService;
@@ -31,6 +32,7 @@ class ArticleCateApiController {
 
 @Api(tags = "文章类别管理API")
 @RestController
+@CrossOrigin()
 @RequestMapping("/api/mani/articleCate")
 class ArticleCateManiController{
     private final ArticleCateService articleCateService;
