@@ -1,6 +1,5 @@
 package space.foril.blog.service;
 
-import org.checkerframework.checker.units.qual.A;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,8 +22,8 @@ public class ArticleServiceImplTest {
 
     @Test
     public void insertTest(){
-        Article artitle = new Article("nwe article title", 1, new Date(), null, "content", null, "des", 1);
-        System.out.println(articleService.insertArticle(artitle));
+        Article article = new Article("new article title", 1, new Date(), null, "content", null, "des", 1);
+        System.out.println(articleService.insertArticle(article));
     }
 
     @Test
